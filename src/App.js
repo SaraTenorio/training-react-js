@@ -1,33 +1,24 @@
-/* AULA 01 */
-// import logo from './logo.svg';
-// import './App.css';
+import './App.css';
+
 // import ProductList from './components/ProductList';
 // import FuncComp from './classVSFunc/FuncComp';
 // import ClassComp from './classVSFunc/ClassComp';
+// import Bookables from './components/bookable/Bookables';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       {/* <ProductList /> */}
-//       <ClassComp />
-//       <hr />
-//       <FuncComp />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-/* AULA 02 */
-import './App.css';
-import Bookables from './components/bookable/Bookables';
-// import Lampada from './lampada/Lampada';
+import Lampada from './lampada/Lampada';
 
 function App() {
   return (
     <div className="App">
-      <Bookables />
-      {/* <Lampada /> */}
+      {/* <ProductList /> */}
+
+      {/* <ClassComp />
+      <hr />
+      <FuncComp /> */}
+
+      {/* <Bookables /> */}
+
+      <Lampada />
     </div>
   );
 }
