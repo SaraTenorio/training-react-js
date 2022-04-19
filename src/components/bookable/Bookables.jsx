@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { data } from '../db';
+import { data } from '../../databases/db';
 
 const { bookables } = data;
 

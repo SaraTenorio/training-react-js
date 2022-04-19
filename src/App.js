@@ -20,14 +20,14 @@
 
 /* AULA 02 */
 import './App.css';
-import Bookables from './components/Bookables';
-import Lampada from './lampada/Lampada';
+import Bookables from './components/bookable/Bookables';
+// import Lampada from './lampada/Lampada';
 
 function App() {
   return (
     <div className="App">
-      {/* <Bookables /> */}
-      <Lampada />
+      <Bookables />
+      {/* <Lampada /> */}
     </div>
   );
 }
