@@ -1,0 +1,63 @@
+snippets de codigo para acompanhar a sessão 1.
+
+1- 
+npx create-react-app voting-app
+ou:
+npm init react-app voting-app
+ou ainda:
+yarn create react-app voting-app
+
+
+
+2- 
+-apagar ficheiros na pasta "/public", deixar so o index.html, acrescentar pasta images
+-acrescentar ficheiros seeds.js para a pasta "src"
+
+
+
+3-
+acrescentar ao index.css:
+@import url('https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css');
+
+ou no index.html
+
+<link
+    async
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
+/>
+
+
+4- 
+substituir no index.html a 
+<div id="root"></div>
+por:
+
+
+<div class="main ui text container">
+    <h1 class="ui dividing centered header">Popular Products</h1>
+    <div id="root"></div>
+</div>
+
+
+
+5-
+Depois de criar a component Product, mudar a view para :
+<div className='item'>
+    <div className='image'>
+        <img src="images/products/image-aqua.png" />
+    </div>
+    <div className='middle aligned content'>
+        <div className='description'>
+            <a>Fort Knight </a>
+            <p> Authentic renaissance actors, devlivered in just two weeks. </p>
+        </div>
+        <div className='extra'>
+            <span>Submitted by: </span>
+            <img className='ui avatar image' src="images/avatars/daniel.jpg" />
+        </div>
+    </div>
+</div>
+
+
+
