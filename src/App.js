@@ -4,8 +4,12 @@ import './App.css';
 // import FuncComp from './classVSFunc/FuncComp';
 // import ClassComp from './classVSFunc/ClassComp';
 // import Bookables from './components/bookable/Bookables';
-
-import Lampada from './lampada/Lampada';
+// import Lampada from './lampada/Lampada';
+// import SayHello from './effects/SayHello';
+// import WindowResize from './effects/WindowResize';
+// import UsingLocalStorage from './effects/UsingLocalStorage';
+//import UserList from './effects/UserList';
+import BookList from './biblioteca/BookList';
 
 function App() {
   return (
@@ -18,7 +22,13 @@ function App() {
 
       {/* <Bookables /> */}
 
-      <Lampada />
+      {/* <SayHello /> */}
+
+      {/* <WindowResize /> */}
+
+      {/* <UsingLocalStorage /> */}
+
+      <BookList />
     </div>
   );
 }
