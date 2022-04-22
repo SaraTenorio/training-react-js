@@ -11,7 +11,7 @@ import './App.css';
 //import UserList from './effects/UserList';
 //import BookDashBoard from './biblioteca/BookDashBoard';
 //import PropDrilling from './components/redux/PropDrilling';
-import UseContext from './components/redux/UseContext';
+//import UseContext from './components/redux/UseContext';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
 
       {/* <PropDrilling /> */}
       
-      <UseContext />
+      {/* <UseContext /> */}
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import '../biblioteca.css';
+
 import React, { useEffect, useState } from 'react'
 import BookList from './BookList';
 
