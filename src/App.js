@@ -12,6 +12,7 @@ import './App.css';
 //import BookDashBoard from './biblioteca/BookDashBoard';
 //import PropDrilling from './components/redux/PropDrilling';
 //import UseContext from './components/redux/UseContext';
+import Chat from './redux-components/Chat';
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
       {/* <PropDrilling /> */}
       
       {/* <UseContext /> */}
+
+      <Chat />
     </div>
   );
 }

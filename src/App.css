@@ -1,5 +1,5 @@
 /* DEFAULT */
-.App {
+/* .App {
   text-align: left;
 }
 
@@ -36,7 +36,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 /* AULA 02 */
 /* .App {
@@ -68,3 +68,18 @@
 .bookableDetails {
   text-align:left;
 } */
+
+/* AULA 04 */
+.App {
+  text-align: center;
+}
+
+.chat {
+  border: 2px solid gray;
+  margin: 20px 30px;
+  padding: 10px;
+}
+
+.message-view, .message-input {
+  padding: 10px;
+}
