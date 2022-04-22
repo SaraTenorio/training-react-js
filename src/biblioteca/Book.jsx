@@ -1,21 +1,25 @@
 import React from 'react'
 
 export default function Book(props) {
-  const { book: { id, title, author, alreadyRead, imageUrl, imageUrlGr, description }, deleteBook } = props;
+  const { id, title, author, alreadyRead, imageUrl, imageUrlGr, description, deleteBook } = props.book;
+
+  const handleDelete = () => {
+    props.onDelete(id);
+  }
 
   return (
-    <div className='grid-item'>
-      <h4>{title}</h4>
-      <h3>{author}</h3>
+    <article>
+      <h1>{title}</h1>
+      <h2>{author}</h2>
 
-      <img alt="Cover" src={"livros/" + imageUrl} />
+      <img src={`livros/${imageUrl}`} alt={title} />
 
       <section>
         <label>Already read: </label>
         <input type="checkbox" checked={alreadyRead} disabled />
       </section>
 
-      <button onClick={(id) => deleteBook(id)}>Delete</button>
-    </div>
+      <button onClick={(id) => handleDelete(id)}>Delete</button>
+    </article>
   )
 }

@@ -9,7 +9,7 @@ import './App.css';
 // import WindowResize from './effects/WindowResize';
 // import UsingLocalStorage from './effects/UsingLocalStorage';
 //import UserList from './effects/UserList';
-import BookList from './biblioteca/BookList';
+import BookDashBoard from './biblioteca/BookDashBoard';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
 
       {/* <UsingLocalStorage /> */}
 
-      <BookList />
+      <BookDashBoard />
     </div>
   );
 }
