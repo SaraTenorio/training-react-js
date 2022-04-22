@@ -1,5 +1,5 @@
 /* DEFAULT */
-/* .App {
+.App {
   text-align: left;
 }
 
@@ -36,7 +36,7 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
 /* AULA 02 */
 /* .App {
@@ -70,7 +70,7 @@
 } */
 
 /* AULA 04 */
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -82,4 +82,4 @@
 
 .message-view, .message-input {
   padding: 10px;
-}
+} */

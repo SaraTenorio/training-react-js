@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Biblioteca de Livros (a ler no futuro)</title>
+</head>
+<body>
+    <h1>Bliblioteca de Livros</h1>
+
+    <section class="filters">
+        <h1>Filtros</h1>
+        <article>
+           <div>
+                <label for="filterRead">Já Lidos</label>
+                <input type="checkbox"  id="filterRead">
+          
+                <label for="filterNotRead">Não Lidos</label>
+                <input type="checkbox"  id="filterNotRead">
+           </div>
+           <div>
+                <label for="filterTitle">Search Title: </label>
+                <input type="text" id="filterTitle">
+           </div>
+        </article>
+
+    </section>
+
+    <section class="manage-books">
+        <form autocomplete="off" id="addEditForm">
+
+            <div>
+                <label for="title">Title: </label>
+                <input type="text" id="title">
+            </div>
+            <div>
+                <label for="author">Author: </label>
+                <input type="text" id="author">
+            </div>
+            <div>
+                <label for="alreadyRead">Já Lido: </label>
+                <input type="checkbox" id="alreadyRead">
+            </div>
+            <div>
+                <label for="imgUrl">Imagem pequena: </label>
+                <input type="text" id="imageUrl">
+            </div>
+            <div>
+                <label for="imgUrlGr">Imagem Grande: </label>
+                <input type="text" id="imageUrlGr">
+            </div>
+            <div class="btns">
+                <button class="btn addBtn" id="submitBtn">Acrescentar Livro</button>
+                <button class="btn updateBtn hide" id="updateBtn">Atualizar Livro</button>
+            </div>
+
+        </form>
+    </section>
+
+    <section class="grid">
+    </section>
+
+    <figure class="popup" id="popup">
+        <img src="livros/blockchainGr.png" alt="livro">
+    </figure>
+
+   
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

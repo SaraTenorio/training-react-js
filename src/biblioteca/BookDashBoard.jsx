@@ -1,7 +1,10 @@
-import '../biblioteca.css';
+//import '../biblioteca.css';
+import '../biblioteca02.css';
 
 import React, { useEffect, useState } from 'react'
 import BookList from './BookList';
+import BookFilter from './BookFilter';
+import BookAdd from './BookAdd';
 
 export default function BookDashBoard() {
 
@@ -25,6 +28,8 @@ export default function BookDashBoard() {
 
     return (
         <div>
+            <BookFilter />
+            <BookAdd />
             <BookList books={books} onDelete={handleDelete} />
         </div>
     )
