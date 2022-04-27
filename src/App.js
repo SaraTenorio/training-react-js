@@ -8,11 +8,12 @@ import './App.css';
 // import SayHello from './effects/SayHello';
 // import WindowResize from './effects/WindowResize';
 // import UsingLocalStorage from './effects/UsingLocalStorage';
-//import UserList from './effects/UserList';
-import BookDashBoard from './biblioteca/BookDashboard';
-//import PropDrilling from './components/redux/PropDrilling';
-//import UseContext from './components/redux/UseContext';
+// import UserList from './effects/UserList';
+// import BookDashBoard from './biblioteca/BookDashboard';
+// import PropDrilling from './components/redux/PropDrilling';
+// import UseContext from './components/redux/UseContext';
 // import Chat from './redux-components/Chat';
+import BookDashBoard from './features/books/components/BookDashboard';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
       <BookDashBoard />
 
       {/* <PropDrilling /> */}
-      
+
       {/* <UseContext /> */}
 
       {/* <Chat /> */}

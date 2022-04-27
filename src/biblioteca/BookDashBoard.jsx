@@ -1,31 +1,26 @@
-import '../biblioteca02.css';
-
-import { useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux'
-import BookList from "./BookList";
+import { useEffect, useState } from 'react'
+/* import {data} from '../data' */
+import BookList from './BookList'
 
 export default function BookDashboard() {
 
-  const dispatch = useDispatch();  
+    const [books, setBooks] = useState([])
 
-  useEffect(() => {
-    (async function () {
-      try {
-        const resp = await fetch('http://localhost:3001/books/');
-        const data = await resp.json();
-        dispatch({
-          type: "READ_BOOKS",
-          payload: data.books,
-        });
-      } catch (error) {
-        console.log('ocorreu um erro')
-      }
-    })(); // IIFE
-  }, [])
+    useEffect(() => {
+
+      fetch('http://localhost:3001/books')
+        .then(response => response.json())
+        .then(data => setBooks(data))
+        .catch(err=>console.log('ocorreu um erro'));
+
+    }, []);
+    
+   
+    const handleDelete = (id) => {
+        setBooks( books.filter( b => b.id !== id));
+    }
 
   return (
-    <div>
-      <BookList />
-    </div>
+        <BookList books={books} onDelete={handleDelete} />
   )
 }
