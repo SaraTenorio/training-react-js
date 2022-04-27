@@ -13,7 +13,11 @@ export const booksSlice = createSlice({
         books: [],
         status: null,
     },
-    reducers: {},
+    reducers: {
+        deleteBook: (state, action) => {
+            state.books = state.books.filter(b => b.id !== action.payload);
+        }
+    },
     extraReducers: {
         [getBooks.pending]: (state, action) => {
             state.status = 'Loading';
@@ -28,4 +32,5 @@ export const booksSlice = createSlice({
     }
 })
 
+export const { deleteBook } = booksSlice.actions;
 export default booksSlice.reducer;

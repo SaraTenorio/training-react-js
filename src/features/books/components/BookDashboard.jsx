@@ -13,7 +13,7 @@ export default function BookDashboard() {
 
   return (
     <div>
-      {/* <BookList /> */}
+      <BookList />
     </div>
   )
 }
