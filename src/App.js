@@ -9,7 +9,7 @@ import './App.css';
 // import WindowResize from './effects/WindowResize';
 // import UsingLocalStorage from './effects/UsingLocalStorage';
 //import UserList from './effects/UserList';
-import BookDashBoard from './biblioteca/BookDashboard';
+// import BookDashBoard from './biblioteca/BookDashboard';
 //import PropDrilling from './components/redux/PropDrilling';
 //import UseContext from './components/redux/UseContext';
 // import Chat from './redux-components/Chat';
@@ -31,10 +31,10 @@ function App() {
 
       {/* <UsingLocalStorage /> */}
 
-      <BookDashBoard />
+      {/* <BookDashBoard /> */}
 
       {/* <PropDrilling /> */}
-      
+
       {/* <UseContext /> */}
 
       {/* <Chat /> */}
