@@ -1,0 +1,132 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+section.filters{
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+section.filters article{
+    display: flex;
+    justify-content: space-between;
+}
+
+section.filters input{
+    margin-right: 20px;
+    padding: 5px;
+}
+
+
+/* *********** FORM ************** */
+section.manage-books {
+    background-color: bisque;
+    min-height: 20vh;
+    padding: 20px;
+}
+
+section.manage-books div {
+    margin: 5px;
+}
+
+section.manage-books label{
+    display: inline-block;
+    width: 20vh;
+    text-align: right;
+}
+
+section.manage-books button{
+    margin-left: calc(20vh + 70px);
+}
+
+input[type='text']{
+    padding: 5px;
+    width: 300px;
+}
+
+
+
+/* ************************* */
+
+
+section.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+}
+
+section.grid article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+section.grid article img{
+    cursor: pointer;
+}
+
+.btn{
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin: 5px;
+    color: white;
+}
+
+.deleteBtn{
+    background-color: tomato;
+}
+.addBtn{
+    background-color: rgb(102, 147, 35);
+}
+.updateBtn, .editBtn{
+    background-color: rgb(81, 77, 144);
+}
+
+figure.popup{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0,0,0,0.6);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+
+    cursor: pointer;
+}
+
+figure.popup.open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.hide {
+    display: none;
+}
