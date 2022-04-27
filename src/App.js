@@ -1,44 +1,16 @@
+import { Link, Outlet } from 'react-router-dom';
 import './App.css';
-
-// import ProductList from './components/ProductList';
-// import FuncComp from './classVSFunc/FuncComp';
-// import ClassComp from './classVSFunc/ClassComp';
-// import Bookables from './components/bookable/Bookables';
-// import Lampada from './lampada/Lampada';
-// import SayHello from './effects/SayHello';
-// import WindowResize from './effects/WindowResize';
-// import UsingLocalStorage from './effects/UsingLocalStorage';
-// import UserList from './effects/UserList';
-// import BookDashBoard from './biblioteca/BookDashboard';
-// import PropDrilling from './components/redux/PropDrilling';
-// import UseContext from './components/redux/UseContext';
-// import Chat from './redux-components/Chat';
-import BookDashBoard from './features/books/components/BookDashboard';
 
 function App() {
   return (
     <div className="App">
-      {/* <ProductList /> */}
-
-      {/* <ClassComp />
-      <hr />
-      <FuncComp /> */}
-
-      {/* <Bookables /> */}
-
-      {/* <SayHello /> */}
-
-      {/* <WindowResize /> */}
-
-      {/* <UsingLocalStorage /> */}
-
-      <BookDashBoard />
-
-      {/* <PropDrilling /> */}
-
-      {/* <UseContext /> */}
-
-      {/* <Chat /> */}
+      <h1>Contabilidade</h1>
+      <nav>
+        <Link to="/invoices">Invoices</Link>
+        <Link to="/expenses">Expenses</Link>
+        <Link to="/search?nome=Sara">Search</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }

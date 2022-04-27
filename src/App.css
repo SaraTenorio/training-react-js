@@ -85,7 +85,7 @@
 } */
 
 /* AULA TOOLKIT */
-.App {
+/* .App {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -149,4 +149,33 @@ section.acrescentar form {
   align-items: center;
   justify-content: space-evenly;
 
+} */
+
+/* AULA ROUTING */
+.App > nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.invoices, .expenses, .invoice-detail, .index, .search {
+  padding: 10px;
+}
+
+.invoices {
+  display: flex;
+}
+
+.invoices > nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: 1px solid gray;
+  padding: 20px;
+}
+
+.active{
+  color: tomato;
 }
