@@ -1,25 +1,26 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 
-export default function Book(props) {
-  const { id, title, author, alreadyRead, imageUrl, imageUrlGr, description, deleteBook } = props.book;
+export default function Book({ book }) {
+
+  const { id, title, author, alreadyRead, description, imageUrl, imageurlGr } = book;
+
+  const dispatch = useDispatch();
 
   const handleDelete = () => {
-    props.onDelete(id);
+    dispatch({
+      type: "DELETE_MESSAGE",
+      id,
+    })
   }
 
   return (
     <article>
       <h1>{title}</h1>
       <h2>{author}</h2>
-
-      <img src={`livros/${imageUrl}`} alt={title} />
-
-      <section>
-        <label>Already read: </label>
-        <input type="checkbox" checked={alreadyRead} disabled />
-      </section>
-
-      <button onClick={(id) => handleDelete(id)}>Delete</button>
+      <img src={'livros/' + imageUrl} />
+      <p>Already Read: {alreadyRead ? "lido" : "Nao Lido"}</p>
+      <button onClick={handleDelete}>DELETE</button>
     </article>
   )
 }

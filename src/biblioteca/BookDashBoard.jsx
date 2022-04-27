@@ -1,36 +1,31 @@
-//import '../biblioteca.css';
 import '../biblioteca02.css';
 
-import React, { useEffect, useState } from 'react'
-import BookList from './BookList';
-import BookFilter from './BookFilter';
-import BookAdd from './BookAdd';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import BookList from "./BookList";
 
-export default function BookDashBoard() {
+export default function BookDashboard() {
 
-    const [books, setBooks] = useState([]);
+  const dispatch = useDispatch();  
 
-    useEffect(() => {
-        (async () => {
-            try {
-                let res = await fetch('http://localhost:3001/books/');
-                let data = await res.json();
-                setBooks(data);
-            } catch (err) {
-                console.log(err);
-            }
-        })();
-    }, []);
+  useEffect(() => {
+    (async function () {
+      try {
+        const resp = await fetch('http://localhost:3001/books/');
+        const data = await resp.json();
+        dispatch({
+          type: "READ_BOOKS",
+          payload: data.books,
+        });
+      } catch (error) {
+        console.log('ocorreu um erro')
+      }
+    })(); // IIFE
+  }, [])
 
-    const handleDelete = (id) => {
-        setBooks(books.filter(b => b.id !== id));
-    }
-
-    return (
-        <div>
-            <BookFilter />
-            <BookAdd />
-            <BookList books={books} onDelete={handleDelete} />
-        </div>
-    )
+  return (
+    <div>
+      <BookList />
+    </div>
+  )
 }
