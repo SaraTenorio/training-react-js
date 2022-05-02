@@ -1,11 +1,11 @@
 import './App.css';
 
-import Bookables from './components/bookable/Bookables'
+import Anagrams from './memo/anagrams'
 
 function App() {
   return (
     <div className="App">
-      <Bookables />
+      <Anagrams />
     </div>
   );
 }
