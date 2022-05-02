@@ -1,16 +1,11 @@
-import { Link, Outlet } from 'react-router-dom';
 import './App.css';
+
+import Bookables from './components/bookable/Bookables'
 
 function App() {
   return (
     <div className="App">
-      <h1>Contabilidade</h1>
-      <nav>
-        <Link to="/invoices">Invoices</Link>
-        <Link to="/expenses">Expenses</Link>
-        <Link to="/search?nome=Sara">Search</Link>
-      </nav>
-      <Outlet />
+      <Bookables />
     </div>
   );
 }

@@ -38,8 +38,8 @@
   }
 } */
 
-/* AULA 02 */
-/* .App {
+/* BOOKABLES */
+.App {
   font-family: sans-serif;
   text-align: center;
   margin: 40px;
@@ -67,7 +67,7 @@
 
 .bookableDetails {
   text-align:left;
-} */
+}
 
 /* AULA 04 */
 /* .App {
@@ -152,7 +152,7 @@ section.acrescentar form {
 } */
 
 /* AULA ROUTING */
-.App > nav {
+/* .App > nav {
   display: flex;
   justify-content: space-around;
   padding: 20px;
@@ -178,4 +178,4 @@ section.acrescentar form {
 
 .active{
   color: tomato;
-}
+} */
