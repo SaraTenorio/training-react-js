@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { data } from '../../databases/db';
 
 const { bookables } = data;
@@ -12,20 +12,35 @@ export default function Bookables() {
     const bookablesInGroup = bookables.filter(b => b.group === group);
     const bookable = bookablesInGroup[bookablesIndex];
 
-    //const group = "Rooms";
+    /* acrescentar apresentacao com useRef() e setInterval() - START */
 
-    //let bookablesIndex = 0;
-    // const changeBookable = (index) => {
-    //     bookablesIndex = index;
-    //     console.log(bookablesIndex);
-    // }
+    const timeRef = useRef(null);
+
+    // useEffect(() => {
+    //     timeRef.current = setInterval(() => {
+    //         nextBookable();
+    //     }, 2000);
+
+    //     return stopPresentation;
+    // }, [])
+
+    function stopPresentation() {
+        clearInterval(timeRef.current);
+    }
+
+    const nextBtnRef = useRef();
+
+    const changeIndex = (i) => {
+        setBookablesIndex(i);
+        nextBtnRef.current.focus();
+    }
+
+    /* acrescentar apresentacao com useRef() e setInterval() - END */
 
     const nextBookable = () => {
-        //setBookablesIndex((bookablesIndex + 1) % bookablesInGroup.length)
         setBookablesIndex(currentState => (currentState + 1) % bookablesInGroup.length)
     }
 
-    //const groups = bookables.map(i => i.group);
     const groups = [...new Set(bookables.map(i => i.group))]
 
     const changeGroup = ({ target: { value } }) => {
@@ -48,15 +63,20 @@ export default function Bookables() {
                 <ul className='bookables items-list-nav'>
                     {
                         bookablesInGroup.map((b, index) => (
-                            <li key={b.id} className={index === bookablesIndex ? 'selected' : null} onClick={() => setBookablesIndex(index)}>
+                            <li key={b.id} className={index === bookablesIndex ? 'selected' : null} onClick={() => changeIndex(index)}>
                                 {b.title}
                             </li>
                         ))
                     }
                 </ul>
-                <button autoFocus onClick={nextBookable}>Next</button>
+                <button autoFocus onClick={nextBookable} ref={nextBtnRef}>Next</button>
             </section>
             <section>
+                {/* parar apresentacao automatica */}
+                <p>
+                    <button onClick={stopPresentation}>Stop Presentation</button>
+                </p>
+                <br />
                 <p>
                     <label htmlFor='details'>Show Details:</label>
                     <input
